@@ -9,13 +9,14 @@ import java.util.List;
 @Component
 public class PersonDAO {
     private List<Person>people;
-    private static final int PEOPLE_COUNT =0;
+    private int autoInc = 0;
+    private static int PEOPLE_COUNT =0;
     {
         people = new ArrayList<>();
-        people.add(new Person(1,"Asadbek"));
-        people.add(new Person(2,"Hurshid"));
-        people.add(new Person(3,"Komil"));
-        people.add(new Person(4,"Bobur"));
+        people.add(new Person(++autoInc,"Asadbek"));
+        people.add(new Person(++autoInc,"Hurshid"));
+        people.add(new Person(++autoInc,"Komil"));
+        people.add(new Person(++autoInc,"Bobur"));
 
     }
     public List<Person> index(){
@@ -23,5 +24,9 @@ public class PersonDAO {
     }
     public Person show(int id){
         return people.stream().filter(person->person.getId()==id).findAny().orElse(null);
+    }
+    public void saveUser(Person person){
+            person.setId(++autoInc);
+            people.add(person);
     }
 }
