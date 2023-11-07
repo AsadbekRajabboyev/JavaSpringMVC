@@ -5,28 +5,29 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/pages")
 public class PagesController {
-    @GetMapping("/first")
+    @GetMapping()
     public String first(){
         return "task/first";
     }
-    @RequestMapping("/second")
+    @GetMapping("/second")
     public String second(){
         return "task/second";
     }
-    @RequestMapping("/third")
+    @GetMapping("/third")
     public String third(){
         return "task/third";
     }
-    @RequestMapping("/four")
+    @GetMapping("/four")
     public String four(){
         return "task/four";
     }
-    @RequestMapping("/five")
+    @GetMapping("/five")
     public String five(){
         return "task/five";
     }
-    @RequestMapping("/six")
+    @GetMapping("/six")
     public String six(){
         return "task/six";
     }

@@ -7,18 +7,22 @@
 <body>
 <form th:method="post" th:action="@{/items}" th:object="${item}">
 
-    <label for="name">Mahsulot nomi......</label>
+    <label for="name">Mahsulot nomi</label>
     <input name="name" type="text" th:field="*{name}" id="name">
     <br>
-    <label for="price">Qancha............</label>
+
+    <label for="price">Qancha</label>
     <input name="price" type="text" th:field="*{price}" id="price">
     <br>
-    <label for="type">Kilogramm & litr...</label>
+
+    <label for="type">Kilogramm & litr</label>
     <input name="type" type="text" th:field="*{type}" id="type">
     <br>
-    <label for="srok">Amal qilish muddati.</label>
+
+    <label for="srok">Amal qilish muddati</label>
     <input name="srok" type="text" th:field="*{srok}" id="srok">
     <br>
+
     <input type="submit" value="Add product">
 </form>
 </body>

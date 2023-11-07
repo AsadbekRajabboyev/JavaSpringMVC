@@ -2,8 +2,6 @@ package uz.spring.mvc.DAO;
 
 import org.springframework.stereotype.Component;
 import uz.spring.mvc.model.Item;
-import uz.spring.mvc.model.Person;
-
 import java.util.ArrayList;
 import java.util.List;
 @Component
