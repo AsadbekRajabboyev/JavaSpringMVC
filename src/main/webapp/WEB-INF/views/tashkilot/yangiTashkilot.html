@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Yangi tashkilot qo'shish</title>
+</head>
+<body>
+<form th:method="post" th:action="@{/tashkilot}" th:object="${tashkilot}">
+    <label for="name">Name</label>
+    <input name="name" type="text" th:field="*{name}" id="name">
+
+    <label for="type">Type</label>
+    <input name="type" type="text" th:field="*{type}" id="type">
+    <input type="submit" value="Add tashkilot">
+</form>
+</body>
+</html>
